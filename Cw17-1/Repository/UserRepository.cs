@@ -33,5 +33,14 @@ namespace Cw17_1.Repository
                 _appDbContext.SaveChanges();
             }
         }
+        public void Edit(User user)
+        {
+            var userrow = _appDbContext.Users.FirstOrDefault(u => u.Id == user.Id );
+            _appDbContext.Users.Update(user);
+            //userrow.FullName = user.FullName;
+            //userrow.Mobile =user.Mobile;
+
+            _appDbContext.SaveChanges();
+        }
     }
 }

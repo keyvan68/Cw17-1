@@ -10,8 +10,12 @@ namespace Cw17_1.Models
         [Display(Name ="ردیف")]
         public int Id { get; set; }
         [Display(Name = "نام کاربری")]
-        public string FullName { get; set; }
+        public string FullName { get; set; } = string.Empty;
         [Display(Name = "موبایل")]
         public string Mobile { get; set; }
+
+
+        public Adrress? Adrress { get; set; }
+
     }
 }

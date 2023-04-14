@@ -33,5 +33,17 @@ namespace Cw17_1.Controllers
             _userRepository.Delete(id);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var user = _userRepository.GetUser(id);
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult Edit(User user)
+        {
+            _userRepository.Edit(user);
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace Cw17_1.Repository
         void Create(User user);
         User GetUser(int id);
         void Delete(int id);
+        void Edit(User user);
     }
 }

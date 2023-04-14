@@ -15,6 +15,7 @@ namespace Cw17_1
             builder.Services.AddDbContext<AppDbContext>(option =>
                 option.UseSqlServer("Data Source=.;Initial Catalog=CW17;Trusted_Connection=True;TrustServerCertificate=True;"));
             builder.Services.AddScoped<IUserRepository,UserRepository>();
+            builder.Services.AddScoped<IAddressRepository, AddressRepository>();
             //builder.Services.AddScoped<IUserRepository, UserRepository>();
             var app = builder.Build();
 
